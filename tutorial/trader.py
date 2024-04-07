@@ -1,4 +1,4 @@
-from datamodel import OrderDepth, UserId, TradingState, Order
+from common.datamodel import OrderDepth, TradingState, Order
 from typing import List
 import string
 

@@ -1,5 +1,4 @@
-from tutorial import Trader
-from datamodel import TradingState, OrderDepth, Listing, Trade, Observation
+from common.datamodel import TradingState, OrderDepth, Listing, Trade, Observation
 from typing import Dict, List
 
 def mock_trading_state() -> TradingState:
@@ -38,20 +37,4 @@ def mock_trading_state() -> TradingState:
         observations=observations
     )
 
-def main():
-    # Instantiate the Trader
-    trader = Trader()
-    
-    # Create a mock TradingState
-    state = mock_trading_state()
-    
-    # Execute the Trader's run method with the mock TradingState
-    result, conversions, traderData = trader.run(state)
-    
-    # Output the results
-    print(f"Orders: {result}")
-    print(f"Conversions: {conversions}")
-    print(f"Trader Data: {traderData}")
 
-if __name__ == "__main__":
-    main()
